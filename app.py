@@ -6,7 +6,7 @@ app = Flask(__name__, template_folder='templates')
 app.secret_key = "force_update_2026"
 
 SENDER_EMAIL = "raoyugalyadav4554@gmail.com" 
-APP_PASSWORD = "pkaw axqq nmob dlqm" 
+APP_PASSWORD = "auge vxda kndz xlik" 
 DB_FILE = 'users_db.json'
 
 def load_data():
