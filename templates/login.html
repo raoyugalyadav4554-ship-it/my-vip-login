@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login</title>
+    <style>
+        body { font-family: sans-serif; background: #f4f7fe; text-align: center; padding-top: 80px; }
+        .box { background: white; display: inline-block; padding: 40px; border-radius: 20px; box-shadow: 0 10px 25px rgba(0,0,0,0.1); width: 320px; }
+        h2 { color: #1a0b47; }
+        input { width: 100%; padding: 12px; margin: 10px 0; border: 1px solid #ddd; border-radius: 8px; box-sizing: border-box; }
+        .captcha { background: #eee; padding: 10px; margin: 10px 0; font-size: 20px; letter-spacing: 5px; font-weight: bold; color: #1a0b47; border-radius: 5px; }
+        button { width: 100%; padding: 15px; background: #1a0b47; color: white; border: none; border-radius: 8px; font-weight: bold; cursor: pointer; }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <h2>Login</h2>
+        <form action="/login" method="post">
+            <input type="text" name="username" placeholder="Phone Number" required>
+            <input type="password" name="password" placeholder="Password" required>
+            <div class="captcha">{{ captcha }}</div>
+            <input type="text" name="captcha_input" placeholder="Enter Captcha" required>
+            <button type="submit">Login Now</button>
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>VIP Dashboard</title>
+    <style>
+        body { font-family: sans-serif; background: #f4f7fe; margin: 0; }
+        .navbar { background: #1a0b47; color: white; padding: 20px; display: flex; justify-content: space-between; align-items: center; }
+        .container { padding: 40px; text-align: center; }
+        .data-card { background: white; padding: 30px; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); display: inline-block; width: 400px; }
+        .user-id { color: #1a0b47; font-size: 24px; font-weight: bold; margin: 20px 0; }
+        .btn-logout { background: #ff4b2b; color: white; padding: 10px 20px; border-radius: 5px; text-decoration: none; font-weight: bold; }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <h2>VIP SYSTEM CORE</h2>
+        <a href="/logout" class="btn-logout">Logout</a>
+    </div>
+    
+    <div class="container">
+        <div class="data-card">
+            <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" width="100">
+            <h3>User Profile Loaded</h3>
+            <p>Welcome back to the secure terminal.</p>
+            <div class="user-id">Phone: {{ user_phone }}</div>
+            <hr>
+            <p style="color: #666; font-size: 14px;">Status: <span style="color: green;">Active</span></p>
+            <p style="color: #666; font-size: 14px;">Clearance Level: VIP Level 1</p>
+        </div>
+    </div>
+</body>
+</html>
