@@ -1,27 +1,24 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Create Account</title>
+    <title>VIP Register</title>
     <style>
-        body { font-family: sans-serif; background: #f4f7fe; text-align: center; padding-top: 50px; }
-        .box { background: white; display: inline-block; padding: 40px; border-radius: 20px; box-shadow: 0 10px 25px rgba(0,0,0,0.1); width: 320px; }
-        h2 { color: #1a0b47; margin-bottom: 20px; }
-        input { width: 100%; padding: 12px; margin: 8px 0; border: 1px solid #ddd; border-radius: 8px; box-sizing: border-box; background: #fafafa; }
-        button { width: 100%; padding: 15px; background: #1a0b47; color: white; border: none; border-radius: 8px; font-weight: bold; cursor: pointer; margin-top: 10px; }
-        .hint { font-size: 10px; color: #888; text-align: left; margin-top: -5px; margin-bottom: 10px; }
+        body { font-family: sans-serif; background: #121212; color: white; text-align: center; padding-top: 100px; }
+        .box { background: #1e1e1e; padding: 30px; border-radius: 15px; display: inline-block; width: 300px; }
+        input { width: 90%; padding: 10px; margin: 10px 0; border-radius: 5px; border: none; }
+        button { width: 95%; padding: 10px; background: #28a745; color: white; border: none; border-radius: 5px; cursor: pointer; }
+        a { color: #007bff; text-decoration: none; }
     </style>
 </head>
 <body>
     <div class="box">
-        <h2>Register</h2>
-        <form action="/signup" method="post">
-            <input type="text" name="phone" placeholder="Phone Number" required maxlength="10">
-            <input type="password" name="password" placeholder="Create Password" required>
-            <div class="hint">Use: A-Z, a-z, 123, & @$!%#</div>
-            <input type="password" name="confirm_password" placeholder="Confirm Password" required>
-            <input type="text" name="invite_code" placeholder="Invite Code (LDNE19)" required>
-            <button type="submit">Sign Up</button>
+        <h2>VIP Register</h2>
+        <form action="/signup_request" method="POST">
+            <input type="email" name="email" placeholder="Email" required>
+            <input type="password" name="password" placeholder="Password" required>
+            <button type="submit">Get OTP</button>
         </form>
+        <p>Account hai? <a href="/">Login Karein</a></p>
     </div>
 </body>
 </html>
