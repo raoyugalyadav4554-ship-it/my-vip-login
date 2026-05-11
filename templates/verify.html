@@ -1,22 +1,13 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <title>Verify OTP</title>
-    <style>
-        body { font-family: sans-serif; background: #121212; color: white; text-align: center; padding-top: 100px; }
-        .box { background: #1e1e1e; padding: 40px; border-radius: 12px; display: inline-block; }
-        input { padding: 12px; width: 80%; margin: 20px 0; border-radius: 6px; border: none; text-align: center; font-size: 20px; }
-        button { padding: 12px 30px; background: #007bff; color: white; border: none; border-radius: 6px; cursor: pointer; width: 88%; font-weight: bold; }
-    </style>
-</head>
-<body>
-    <div class="box">
-        <h2>Verify Email</h2>
-        <p>Please enter the 6-digit OTP sent to your email.</p>
+<body style="background:#121212;color:white;text-align:center;padding-top:100px;font-family:sans-serif;">
+    <div style="background:#1e1e1e;padding:40px;border-radius:12px;display:inline-block;">
+        <h2>Verify OTP</h2>
+        <p>Enter the 6-digit code sent to your email.</p>
         <form action="/verify" method="POST">
-            <input type="text" name="otp" placeholder="Enter OTP" required maxlength="6">
-            <br>
-            <button type="submit">Verify Now</button>
+            <input type="text" name="otp" placeholder="000000" required style="padding:10px;text-align:center;">
+            <br><br>
+            <button type="submit" style="padding:10px 20px;background:#007bff;color:white;border:none;border-radius:5px;">Verify Now</button>
         </form>
     </div>
 </body>
