@@ -2,23 +2,23 @@
 <html>
 <head>
     <title>VIP Register</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
-        body { font-family: sans-serif; background: #121212; color: white; text-align: center; padding-top: 100px; }
-        .box { background: #1e1e1e; padding: 30px; border-radius: 15px; display: inline-block; width: 300px; }
-        input { width: 90%; padding: 10px; margin: 10px 0; border-radius: 5px; border: none; }
-        button { width: 95%; padding: 10px; background: #28a745; color: white; border: none; border-radius: 5px; cursor: pointer; }
-        a { color: #007bff; text-decoration: none; }
+        body { background: #121212; color: white; font-family: sans-serif; display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0; }
+        .card { background: #1e1e1e; padding: 30px; border-radius: 15px; text-align: center; width: 300px; }
+        input { width: 90%; padding: 12px; margin: 10px 0; border-radius: 5px; border: none; }
+        button { width: 100%; padding: 12px; background: #28a745; color: white; border: none; border-radius: 5px; cursor: pointer; }
     </style>
 </head>
 <body>
-    <div class="box">
-        <h2>VIP Register</h2>
+    <div class="card">
+        <h2>Create Account</h2>
         <form action="/signup_request" method="POST">
-            <input type="email" name="email" placeholder="Email" required>
-            <input type="password" name="password" placeholder="Password" required>
+            <input type="email" name="email" placeholder="Enter Email" required>
+            <input type="password" name="password" placeholder="Create Password" required>
             <button type="submit">Get OTP</button>
         </form>
-        <p>Account hai? <a href="/">Login Karein</a></p>
+        <p><a href="/" style="color:gray; text-decoration:none;">Back to Login</a></p>
     </div>
 </body>
 </html>
