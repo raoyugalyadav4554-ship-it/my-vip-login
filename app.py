@@ -3,7 +3,7 @@ import random, smtplib, os
 from email.message import EmailMessage
 
 app = Flask(__name__)
-app.secret_key = "final_ultra_secure_key"
+app.secret_key = "victory_key_99"
 
 @app.route('/')
 def home():
@@ -26,13 +26,15 @@ def signup_request():
     msg['To'] = email
 
     try:
-        # Timeout add kiya hai taaki server ghumta na rahe
-        with smtplib.SMTP_SSL('smtp.gmail.com', 465, timeout=10) as smtp:
-            smtp.login("raoyugalyadav4554@gmail.com", "auge vxda kndz xlik")
-            smtp.send_message(msg)
+        # TLS use kar rahe hain (Port 587) jo network block nahi hota
+        server = smtplib.SMTP('smtp.gmail.com', 587, timeout=15)
+        server.starttls() 
+        server.login("raoyugalyadav4554@gmail.com", "auge vxda kndz xlik")
+        server.send_message(msg)
+        server.quit()
         return render_template('verify.html')
     except Exception as e:
-        return f"<h1>Mail Error: {str(e)}</h1><p>Check if your App Password is correct.</p>"
+        return f"<h1>Connection Error: {str(e)}</h1><p>Bhai, Render ka network SMTP block kar raha hai. TLS try kiya hai ab.</p>"
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=10000)
